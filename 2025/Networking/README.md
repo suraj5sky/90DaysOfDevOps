@@ -43,16 +43,31 @@ The TCP/IP model simplifies networking into four key layers:
 ---
 
 ### 2. 🔑 Important Protocols and Ports for DevOps
-#### **Essential Networking Protocols**
-| **Protocol**  | **Port Number** | **Purpose**                  | **DevOps Use Case**             |
-|---------------|-----------------|------------------------------|----------------------------------|
-| **HTTP**      | 80              | Unsecured web traffic        | Web server access               |
-| **HTTPS**     | 443             | Secure web traffic           | Secure communications           |
-| **SSH**       | 22              | Remote access                | Server management               |
-| **DNS**       | 53              | Domain name resolution       | Kubernetes service discovery    |
-| **FTP**       | 20/21           | File transfers               | Uploading files to servers      |
-| **MySQL**     | 3306            | Database communication       | Database management in apps     |
-| **K8s API**   | 6443            | Kubernetes API communication | Orchestrating containerized apps|
+#### **Comprehensive Protocols and Ports**
+| **Protocol**    | **Port Number**   | **Purpose**                     | **DevOps Use Case**                   |
+|------------------|-------------------|----------------------------------|---------------------------------------|
+| **HTTP**        | 80                | Unsecured web traffic           | Web server access                     |
+| **HTTPS**       | 443               | Secure web traffic              | Secure communications                 |
+| **SSH**         | 22                | Remote access                   | Server and infrastructure management  |
+| **DNS**         | 53                | Domain name resolution          | Kubernetes service discovery          |
+| **FTP**         | 20/21             | File transfers                  | Uploading files to servers            |
+| **MySQL**       | 3306              | Database communication          | Application database connectivity     |
+| **MongoDB**     | 27017             | NoSQL database communication    | Microservices and backend development |
+| **K8s API**     | 6443              | Kubernetes API communication    | Orchestrating containerized apps      |
+| **Kafka**       | 9092              | Message streaming               | Data pipelines and logging            |
+| **NTP**         | 123               | Network time protocol           | Synchronizing time across systems     |
+| **SMTP**        | 25, 587           | Sending email                   | Alerting and notifications            |
+| **IMAP**        | 143, 993          | Email retrieval                 | Email services                        |
+| **POP3**        | 110, 995          | Email retrieval                 | Legacy email services                 |
+| **Prometheus**  | 9090              | Metrics monitoring              | Infrastructure monitoring             |
+| **Grafana**     | 3000              | Dashboard visualization         | Monitoring and alerting dashboards    |
+| **Jenkins**     | 8080              | CI/CD pipelines                 | Automating deployment processes       |
+| **Git**         | 9418              | Git protocol                    | Version control and repo cloning      |
+| **Docker**      | 2375 (TCP)        | Docker API                      | Managing containers                   |
+| **RDP**         | 3389              | Remote Desktop Protocol         | Managing Windows servers remotely     |
+| **LDAP**        | 389, 636          | Directory services              | Centralized authentication            |
+| **SNMP**        | 161, 162          | Network management              | Monitoring and managing devices       |
+| **VPN (OpenVPN)**| 1194             | Secure remote access            | Securing private network connections  |
 
 
 ---
@@ -73,10 +88,16 @@ The TCP/IP model simplifies networking into four key layers:
      ssh -i <key>.pem ubuntu@<EC2-Public-IP>
      ```
 
-#### **Security Groups Best Practices**
-- Use **least privilege**: Open only the ports necessary for your application.
-- Restrict **inbound traffic** to specific IP ranges.
-- Monitor and review rules regularly for compliance.
+#### Security Groups Overview:
+- **Inbound Rules**:
+  - Define traffic allowed into the instance.
+- **Outbound Rules**:
+  - Define traffic leaving the instance.
+- **Best Practices**:
+  - Use least privilege by opening only required ports.
+  - Restrict access by IP ranges.
+
+
 
 
 DevOps journey! 🚀
