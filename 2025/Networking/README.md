@@ -54,7 +54,6 @@ The TCP/IP model simplifies networking into four key layers:
 | **MySQL**     | 3306            | Database communication       | Database management in apps     |
 | **K8s API**   | 6443            | Kubernetes API communication | Orchestrating containerized apps|
 
-**📌 Pro Tip**: Add real-world examples to your blog explaining configurations (e.g., setting up an NGINX server or SSH access).
 
 ---
 
