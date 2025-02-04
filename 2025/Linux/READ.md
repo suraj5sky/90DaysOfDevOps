@@ -16,6 +16,7 @@ sudo usermod -aG devops_team devops_user
 sudo visudo  # Add 'devops_user ALL=(ALL) NOPASSWD:ALL'
 sudo nano /etc/ssh/sshd_config  # Restrict SSH access
 sudo systemctl restart sshd
+
 2️⃣ File & Directory Permissions
 Task:
 Create /devops_workspace and a file project_notes.txt.
@@ -30,6 +31,7 @@ mkdir /devops_workspace
 touch /devops_workspace/project_notes.txt
 chmod 740 /devops_workspace/project_notes.txt
 ls -l /devops_workspace/project_notes.txt
+
 3️⃣ Log File Analysis with AWK, Grep & Sed
 Logs are crucial in DevOps! You’ll analyze logs using the Linux_2k.log file from LogHub (GitHub Repo).
 
@@ -45,6 +47,7 @@ grep -i "error" Linux_2k.log
 awk '{print $1, $2, $3}' Linux_2k.log  # Extract timestamps and log levels
 sed -E 's/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/[REDACTED]/g' Linux_2k.log > sanitized.log
 awk '{print $0}' Linux_2k.log | sort | uniq -c | sort -nr | head -10  # Find frequent log messages
+
 4️⃣ Volume Management & Disk Usage
 Task:
 Create a directory /mnt/devops_data.
@@ -58,6 +61,7 @@ mkdir /mnt/devops_data
 sudo mount /dev/xvdf /mnt/devops_data
 df -h
 mount | grep devops_data
+
 5️⃣ Process Management & Monitoring
 Task:
 Start a background process (ping google.com > ping_test.log &).
@@ -72,6 +76,7 @@ ps aux | grep ping
 top  # Press 'q' to exit
 htop  # Install using 'sudo apt install htop'
 kill -9 <PID>
+
 6️⃣ Automate Backups with Shell Scripting
 Task:
 Write a shell script to back up /devops_workspace as backup_$(date +%F).tar.gz.
